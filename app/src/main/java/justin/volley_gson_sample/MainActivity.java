@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
      * use the volleyService with the above URL and an anonymous inner callback class that will
      * trigger when volley returns the data or an error.
      * TODO: look into timeout/retry logic.
+     * TODO: Map JSON using GSON to complete example.
      */
     private void getAllJsonData() {
         mVolleyService.getDataVolley(url, new VolleyCallback() {
