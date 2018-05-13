@@ -3,10 +3,12 @@ package justin.volley_gson_sample;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.android.volley.VolleyError;
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     VolleyService mVolleyService = new VolleyService(this);
@@ -31,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccessResponse(JSONObject response) { // we can do stuff with the response once it is returned here.
                 JSONObject fetchedJsonData = response;
+                TextView tv = findViewById(R.id.someText);
+                tv.setText(fetchedJsonData.toString());
+
             }
 
             @Override
